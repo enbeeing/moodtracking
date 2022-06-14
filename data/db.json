@@ -1,0 +1,18 @@
+{
+    "episodes":[
+        {
+            "title": "Klarede opvaksen",
+            "date": "I går kl 12",
+            "description": "Kunne ikke overskue at vaske op hele sidste uge. Klarede det endeligt efter at have snakket med Niels",
+            "rating": 4,
+            "id": 1
+        },
+        {
+            "title": "Gik en lang tur",
+            "date": "I går kl 07.30",
+            "description": "Gik en mega lang tur i skoven. Alle bladene og de flotte farver gjorde mig varm inden i",
+            "rating": 3,
+            "id": 2
+        }
+    ]
+}
