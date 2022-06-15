@@ -7,7 +7,7 @@
     <div v-else>
       <p>loading...</p>
     </div>
-    <button class="add-button">
+    <router-link :to="{ name: 'AddEpisode' }" role="button" class="add-button">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -21,7 +21,7 @@
           d="M12 6v6m0 0v6m0-6h6m-6 0H6"
         />
       </svg>
-    </button>
+    </router-link>
   </div>
 </template>
 
@@ -46,6 +46,7 @@ load();
   bottom: 1rem;
   right: 1rem;
 }
+
 .home svg {
   color: var(--main-bg-color);
 }
