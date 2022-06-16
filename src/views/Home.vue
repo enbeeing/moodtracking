@@ -6,13 +6,16 @@
     </div>
     <div v-else>
       <p>loading...</p>
+      <!-- anden loading -->
     </div>
     <router-link :to="{ name: 'AddEpisode' }" role="button" class="add-button">
+      <span class="sr-only">add episode</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
+        aria-hidden="true"
       >
         <path
           stroke-linecap="round"
@@ -53,4 +56,6 @@ load();
 .home svg {
   color: var(--main-bg-color);
 }
+
+/* active and hover */
 </style>
