@@ -52,7 +52,7 @@ onMounted(() => {
   // if not this year
   if (today.getFullYear() !== props.date.year) {
     formattedDate.value = `${
-      props.date.date + "/" + props.date.month + "-" + props.date.year
+      props.date.date + "-" + props.date.month + "-" + props.date.year
     }`;
   } else {
     // if not this month
@@ -61,7 +61,7 @@ onMounted(() => {
         findWeekday(props.date.day) +
         " d. " +
         props.date.date +
-        "/" +
+        "-" +
         props.date.month
       }`;
     }
