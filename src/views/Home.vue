@@ -35,16 +35,19 @@ load();
 </script>
 
 <style>
+.home {
+  display: flex;
+  flex-direction: column;
+}
 .home .add-button {
-  border: none;
-  outline: none;
   background: var(--accent-color);
   border-radius: 50%;
-  max-width: 80px;
-  max-height: 80px;
+  width: 80px;
+  height: 80px;
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 0;
+  align-self: flex-end;
+  margin: 1rem;
 }
 
 .home svg {

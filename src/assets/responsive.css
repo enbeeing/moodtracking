@@ -1,0 +1,22 @@
+@media screen and (min-width: 500px) {
+    .rating .icon {
+        width: 90px;
+        height: 90px;
+    }    
+}
+
+@media screen and (min-width: 800px) {
+    body {  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rating .icon {
+        width: 150px;
+        height: 150px;
+    }  
+    
+    
+}

@@ -4,7 +4,7 @@
       <input type="radio" name="emoji" id="shit" value="1" v-model="rating" />
       <label for="shit">
         <!-- <span class="sr-only">shit</span> -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
           <g data-name="Group 50">
             <path
               data-name="Path 21"
@@ -55,6 +55,9 @@
               />
             </g>
           </g>
+        </svg> -->
+        <svg class="icon">
+          <use xlink:href="#vomitted" />
         </svg>
       </label>
     </span>
@@ -68,7 +71,7 @@
       />
       <label for="not-great">
         <!-- <span class="sr-only">Not great</span> -->
-        <svg
+        <!-- <svg
           data-name="Group 77"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 34 34"
@@ -125,6 +128,9 @@
               </g>
             </g>
           </g>
+        </svg> -->
+        <svg class="icon">
+          <use xlink:href="#sad" />
         </svg>
       </label>
     </span>
@@ -139,7 +145,7 @@
       />
       <label for="normal">
         <!-- <span class="sr-only">Normal</span> -->
-        <svg
+        <!-- <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 34 34"
           data-name="Group 15"
@@ -176,6 +182,9 @@
               />
             </g>
           </g>
+        </svg> -->
+        <svg class="icon">
+          <use xlink:href="#neutral" />
         </svg>
       </label>
     </span>
@@ -183,7 +192,7 @@
       <input type="radio" name="emoji" id="great" value="4" v-model="rating" />
       <label for="great">
         <!-- <span class="sr-only">Great</span> -->
-        <svg
+        <!-- <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 34 34"
           data-name="Group 40"
@@ -227,6 +236,9 @@
               </g>
             </g>
           </g>
+        </svg> -->
+        <svg class="icon">
+          <use xlink:href="#happy-real" />
         </svg>
       </label>
     </span>
@@ -240,7 +252,7 @@
       />
       <label for="amazing">
         <!-- <span class="sr-only">Amazing</span> -->
-        <svg
+        <!-- <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 34 34"
           data-name="Group 10"
@@ -289,6 +301,9 @@
               />
             </g>
           </g>
+        </svg> -->
+        <svg class="icon">
+          <use xlink:href="#happy" />
         </svg>
       </label>
     </span>
@@ -303,7 +318,6 @@ const emit = defineEmits(["change"]);
 const rating = ref(null);
 
 onUpdated(() => {
-  console.log(rating.value);
   emit("change", rating.value);
 });
 </script>
@@ -320,13 +334,14 @@ input[type="radio"] {
   display: none;
 }
 
-.rating svg {
-  margin: 0.4rem;
+.rating .icon {
+  width: 60px;
+  height: 60px;
   color: var(--ranking-default-color);
   transition: 0.1s;
 }
 
-input[type="radio"]:checked ~ label > svg {
+input[type="radio"]:checked ~ label > .icon {
   color: var(--ranking-checked-color);
 }
 </style>
