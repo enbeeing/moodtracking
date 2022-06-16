@@ -1,18 +1,94 @@
 {
-    "episodes":[
-        {
-            "title": "Klarede opvaksen",
-            "date": "I går kl 12",
-            "description": "Kunne ikke overskue at vaske op hele sidste uge. Klarede det endeligt efter at have snakket med Niels",
-            "rating": 4,
-            "id": 1
-        },
-        {
-            "title": "Gik en lang tur",
-            "date": "I går kl 07.30",
-            "description": "Gik en mega lang tur i skoven. Alle bladene og de flotte farver gjorde mig varm inden i",
-            "rating": 3,
-            "id": 2
-        }
-    ]
+  "episodes": [
+    {
+      "title": "Klarede opvaksen",
+      "date": {
+        "year": 2021,
+        "month": 7,
+        "day": 5,
+        "date": 2,
+        "week": 24,
+        "hour": 10,
+        "min": 10
+      },
+      "description": "Kunne ikke overskue at vaske op hele sidste uge. Klarede det endeligt efter at have snakket med Niels",
+      "rating": 4,
+      "id": 1
+    },
+    {
+      "title": "Gik en lang tur",
+      "date": {
+        "year": 2022,
+        "month": 1,
+        "day": 2,
+        "date": 2,
+        "week": 20,
+        "hour": 19,
+        "min": 0
+      },
+      "description": "Gik en mega lang tur i skoven. Alle bladene og de flotte farver gjorde mig varm inden i",
+      "rating": 3,
+      "id": 2
+    },
+    {
+      "title": "dfghjmk",
+      "date": {
+        "year": 2022,
+        "month": 6,
+        "day": 3,
+        "date": 15,
+        "week": 23,
+        "hour": 14,
+        "min": 56
+      },
+      "description": "dfvgbhnj",
+      "rating": 3,
+      "id": 3
+    },
+    {
+      "title": "dfghj",
+      "date": {
+        "year": 2022,
+        "month": 6,
+        "day": 4,
+        "date": 15,
+        "week": 24,
+        "hour": 10,
+        "min": 19
+      },
+      "description": "cvhbjnkm",
+      "rating": null,
+      "id": 4
+    },
+    {
+      "title": "ghjk",
+      "date": {
+        "year": 2022,
+        "month": 6,
+        "day": 4,
+        "date": 16,
+        "week": 24,
+        "hour": 10,
+        "min": 0
+      },
+      "description": "fygvhbjn",
+      "rating": null,
+      "id": 5
+    },
+    {
+      "title": "ghjk",
+      "date": {
+        "year": 2022,
+        "month": 6,
+        "day": 4,
+        "date": 16,
+        "week": 24,
+        "hour": 10,
+        "min": 27
+      },
+      "description": "fygvhbjn",
+      "rating": null,
+      "id": 6
+    }
+  ]
 }

@@ -1,13 +1,7 @@
 <template>
   <div class="rating">
     <span>
-      <input
-        type="radio"
-        name="emoji"
-        id="shit"
-        value="1"
-        @click="updateRating"
-      />
+      <input type="radio" name="emoji" id="shit" value="1" v-model="rating" />
       <label for="shit">
         <!-- <span class="sr-only">shit</span> -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
@@ -70,7 +64,7 @@
         name="emoji"
         id="not-great"
         value="2"
-        @click="updateRating"
+        v-model="rating"
       />
       <label for="not-great">
         <!-- <span class="sr-only">Not great</span> -->
@@ -141,7 +135,7 @@
         id="normal"
         value="3"
         checked
-        @click="updateRating"
+        v-model="rating"
       />
       <label for="normal">
         <!-- <span class="sr-only">Normal</span> -->
@@ -186,13 +180,7 @@
       </label>
     </span>
     <span>
-      <input
-        type="radio"
-        name="emoji"
-        id="great"
-        value="4"
-        @click="updateRating"
-      />
+      <input type="radio" name="emoji" id="great" value="4" v-model="rating" />
       <label for="great">
         <!-- <span class="sr-only">Great</span> -->
         <svg
@@ -248,7 +236,7 @@
         name="emoji"
         id="amazing"
         value="5"
-        @click="updateRating"
+        v-model="rating"
       />
       <label for="amazing">
         <!-- <span class="sr-only">Amazing</span> -->
@@ -308,13 +296,16 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onUpdated, ref } from "vue";
 
 const emit = defineEmits(["change"]);
 
-const updateRating = (e) => {
-  emit("change", e.target.value);
-};
+const rating = ref(null);
+
+onUpdated(() => {
+  console.log(rating.value);
+  emit("change", rating.value);
+});
 </script>
 
 <style>
@@ -330,8 +321,8 @@ input[type="radio"] {
 }
 
 .rating svg {
-  margin: 0.2rem;
-  color: var(--light-text-color);
+  margin: 0.4rem;
+  color: var(--ranking-default-color);
   transition: 0.1s;
 }
 

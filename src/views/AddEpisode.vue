@@ -1,13 +1,14 @@
 <template>
-  <div class="add-wrapper">
+  <section class="add-wrapper">
     <BackHome />
+
     <form @submit.prevent="handleSubmit">
       <div class="title input-wrapper">
         <label>Hvordan har du det?</label>
         <input v-model="title" type="text" required />
       </div>
 
-      <Rating @change="handleRating" />
+      <Rating @change="ratingChanged" />
 
       <div class="description input-wrapper">
         <label>Beskrivelse</label>
@@ -16,31 +17,30 @@
 
       <button class="submit">Gem</button>
     </form>
-  </div>
+  </section>
 </template>
 
 <script setup>
 import BackHome from "../components/BackHome.vue";
 import Rating from "../components/Rating.vue";
+import getDate from "../composables/getDate";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
 const title = ref("");
 const description = ref("");
-const rating = ref(Number(3));
-const date = ref("");
+const rating = ref(null);
 
 const router = useRouter();
 
-const handleRating = (e) => {
-  rating.value = Number(e);
+const ratingChanged = (value) => {
+  rating.value = Number(value);
 };
 
-// how to add date?
 const handleSubmit = async () => {
   const episode = {
     title: title.value,
-    date: date.value,
+    date: getDate(),
     description: description.value,
     rating: rating.value,
   };
