@@ -13,6 +13,3 @@ const props = defineProps({
   episodes: Array,
 });
 </script>
-
-<style>
-</style>
