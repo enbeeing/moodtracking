@@ -1,9 +1,9 @@
 <template>
-  <div class="episode-list">
-    <div v-for="episode in episodes" :key="episode.id">
+  <section class="episode-list">
+    <div v-for="episode in episodes.slice().reverse()" :key="episode.id">
       <SingleEpisode :episode="episode" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

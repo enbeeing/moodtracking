@@ -1,5 +1,5 @@
 <template>
-  <section class="add-wrapper">
+  <div class="add-wrapper">
     <BackHome />
 
     <form @submit.prevent="handleSubmit">
@@ -17,7 +17,7 @@
 
       <button class="submit">Gem</button>
     </form>
-  </section>
+  </div>
 </template>
 
 <script setup>

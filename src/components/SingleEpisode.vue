@@ -1,5 +1,4 @@
 <template>
-  <!-- semantic -->
   <article class="episode">
     <h3>{{ episode.title }}</h3>
     <Date :date="episode.date" />
