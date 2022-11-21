@@ -7,6 +7,8 @@
   --accent-color: #065f46;
   --ranking-default-color: #ddd;
   --ranking-checked-color: #fcd34d;
+  --loader-bg-color: #dddddd60;
+  --loader-spin-color: #065f46;
 }
   
 * {
