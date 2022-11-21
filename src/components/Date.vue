@@ -68,7 +68,7 @@ onMounted(() => {
     // if not this week
     else if (getWeekNumber(today) !== props.date.week) {
       formattedDate.value = `${
-        findWeekday(props.date.day) + " d. " + props.date.date
+        findWeekday(props.date.day) + " d. " + props.date.date + "."
       }`;
     } else {
       // if today
