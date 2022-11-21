@@ -4,9 +4,8 @@
     <div v-if="episodes.length">
       <EpisodeList :episodes="episodes" />
     </div>
-    <div v-else>
-      <p>loading...</p>
-      <!-- anden loading -->
+    <div class="loading-wrap" v-else>
+      <div class="loader"></div>
     </div>
     <router-link :to="{ name: 'AddEpisode' }" role="button" class="add-button">
       <span class="sr-only">add episode</span>
@@ -42,7 +41,8 @@ load();
   display: flex;
   flex-direction: column;
 }
-.home .add-button {
+
+.add-button {
   background: var(--accent-color);
   border-radius: 50%;
   width: 80px;
@@ -55,6 +55,32 @@ load();
 
 .home svg {
   color: var(--main-bg-color);
+}
+
+/* loading symbol */
+.loading-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.loader {
+  border: 3px solid var(--loader-bg-color);
+  border-top: 3px solid var(--loader-spin-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* active and hover */

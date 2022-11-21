@@ -3,16 +3,23 @@
     <h3>{{ episode.title }}</h3>
     <Date :date="episode.date" />
     <p>{{ episode.description }}</p>
-    <p>Rating: {{ episode.rating }}</p>
+    <p>{{ ratingStars }}</p>
   </article>
 </template>
 
 <script setup>
+import { ref } from "@vue/runtime-core";
 import Date from "../components/Date.vue";
 
 const props = defineProps({
   episode: Object,
 });
+
+const ratingStars = ref("");
+
+for (let i = 0; i < props.episode.rating; i++) {
+  ratingStars.value += "⭐";
+}
 </script>
 
 <style>

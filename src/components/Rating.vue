@@ -99,7 +99,7 @@ input[type="radio"] {
   width: 60px;
   height: 60px;
   color: var(--ranking-default-color);
-  transition: 0.1s;
+  transition: 0.2s;
 }
 
 input[type="radio"]:checked ~ label > .icon {
